@@ -13,16 +13,27 @@ export const MENUS = [
     id: 0,
     title: "Inicio",
     icon: <HomeOutlined />,
+    link: "/",
   },
   {
     id: 1,
     title: "Mis cursos",
     icon: <SlideshowOutlined />,
+    link: "/my-courses",
   },
-  { id: 2, title: "Quizzes", icon: <PostAddOutlined /> },
-  { id: 3, title: "Mi plan de estudios", icon: <BubbleChartOutlined /> },
-  { id: 4, title: "Comunidad", icon: <QuestionAnswerOutlined /> },
-  { id: 5, title: "Centro de ayuda", icon: <SportsSoccerOutlined /> },
+  { id: 2, title: "Quizzes", icon: <PostAddOutlined />, link: "/quizzes" },
+  {
+    id: 3,
+    title: "Mi plan de estudios",
+    icon: <BubbleChartOutlined />,
+    link: "/my-curriculum",
+  },
+  {
+    id: 4,
+    title: "Comunidad",
+    icon: <QuestionAnswerOutlined />,
+    link: "/community",
+  },
 ];
 
 //Sample Dropdown lists

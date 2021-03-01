@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import { withStyles, Select, FormControl, MenuItem } from "@material-ui/core";
-import { Search, Whatshot, Stars, LocalFlorist } from "@material-ui/icons";
+import {
+  Search,
+  Whatshot,
+  Stars,
+  LocalFlorist,
+  AccountCircle,
+  NotificationsNoneOutlined,
+} from "@material-ui/icons";
 import { Styles } from "./styles";
 import { DROPDOWN_LIST } from "../../constants";
+import Logo from "../../assets/images/mob-logo.png";
 
 const Header = ({ classes }) => {
   const [Value, setValue] = useState(0);
@@ -10,6 +18,7 @@ const Header = ({ classes }) => {
   const { hot, star, flower } = Counts; //Destructuring the Counts state value
   return (
     <div className={classes.root}>
+      <img src={Logo} alt="Logo" className={classes.logo} />
       <div className={classes.contents}>
         <FormControl className={classes.formControl}>
           <Select
@@ -43,7 +52,10 @@ const Header = ({ classes }) => {
           {flower}
         </div>
       </div>
-      <div>cool</div>
+      <div className={classes.icons}>
+        <NotificationsNoneOutlined className={classes.notifyIcon} />
+        <AccountCircle className={classes.avatarIcon} />
+      </div>
     </div>
   );
 };

@@ -33,4 +33,15 @@ export const Styles = () => ({
       },
     },
   },
+  selected: {
+    backgroundColor: "#EDEEFF",
+    borderRadius: 50,
+    width: "fit-content",
+    "& span": {
+      color: "#3843D0",
+    },
+    "& svg": {
+      color: "#E8366C",
+    },
+  },
 });

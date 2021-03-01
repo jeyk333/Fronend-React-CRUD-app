@@ -3,11 +3,17 @@ import { withStyles } from "@material-ui/core";
 import { Styles } from "./styles";
 import Header from "./Header";
 import SideMenu from "./SideMenu";
+import MobileSideMenu from "./MobileSideMenu";
 
-const Layout = ({ children, classes }) => {
+const Layout = ({ children, classes, path }) => {
   return (
     <div className={classes.root}>
-      <SideMenu />
+      <div className={classes.desktopSideMenu}>
+        <SideMenu path={path} />
+      </div>
+      <div className={classes.mobileSideMenu}>
+        <MobileSideMenu path={path} />
+      </div>
       <div className={classes.content}>
         <Header />
         {children}

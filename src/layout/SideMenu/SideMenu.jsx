@@ -5,7 +5,7 @@ import { Styles } from "./styles.js";
 import Logo from "../../assets/images/logo.svg";
 import { MENUS } from "../../constants";
 
-const SideMenu = ({ classes }) => {
+const SideMenu = ({ classes, path }) => {
   return (
     <Drawer
       className={classes.drawer}
@@ -18,7 +18,11 @@ const SideMenu = ({ classes }) => {
       <img src={Logo} alt="Logo" />
       <div className={classes.menus}>
         {MENUS.map((menu) => (
-          <Link to="/" key={menu.id}>
+          <Link
+            to={menu.link}
+            key={menu.id}
+            className={path === menu.link ? classes.selected : ""}
+          >
             {menu.icon}
             <span>{menu.title}</span>
           </Link>

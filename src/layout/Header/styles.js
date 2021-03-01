@@ -1,14 +1,22 @@
-export const Styles = () => ({
+export const Styles = (theme) => ({
   root: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     padding: "20px 38px",
+    marginBottom: 40,
+    [theme.breakpoints.down("sm")]: {
+      padding: "20px 10px 0",
+      borderBottom: "1px solid rgba(219, 219, 219, 1)",
+    },
   },
   contents: {
     display: "flex",
     alignItems: "center",
     width: "15%",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   formControl: {
     width: "100%",
@@ -39,6 +47,30 @@ export const Styles = () => ({
       display: "flex",
       alignItems: "center",
       marginRight: 25,
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  icons: {
+    display: "flex",
+    alignItems: "center",
+  },
+  notifyIcon: {
+    color: "rgba(154, 156, 181, 1)",
+    marginRight: 35,
+    width: 28,
+    height: 28,
+  },
+  avatarIcon: {
+    color: "rgba(56, 67, 208, 1)",
+    width: 40,
+    height: 40,
+  },
+  logo: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
     },
   },
 });
