@@ -1,4 +1,4 @@
-# Luca Dashboard app
+# Dashboard app
 A Simpele Dashboard Application developed using React with Redux
 
 ## Quick Start
